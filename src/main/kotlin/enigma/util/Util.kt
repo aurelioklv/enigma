@@ -28,7 +28,7 @@ fun validateWiring(wiring: Map<Char, Char>, kind: String) {
     wiring.mapKeys { it.key.uppercaseChar() }.mapValues { it.value.uppercaseChar() }
 }
 
-fun String.toWiring(kind: String, fillMissing: Boolean = false): Map<Char, Char> {
+fun String.toWiring(kind: String): Map<Char, Char> {
     val input = this.uppercase()
     val result = when (kind) {
         in listOf("rotor", "reflector") -> {

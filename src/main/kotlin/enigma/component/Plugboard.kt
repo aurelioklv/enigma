@@ -17,7 +17,7 @@ class Plugboard(
     }
 
     fun setWiringMap(wiringString: String) {
-        wiringMap = wiringString.toWiring(kind = "plugboard", fillMissing = true)
+        wiringMap = wiringString.toWiring(kind = "plugboard")
     }
 
     fun getWiringMap(): Map<Char, Char> {

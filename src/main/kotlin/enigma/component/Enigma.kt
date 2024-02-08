@@ -90,6 +90,12 @@ class Enigma(
                     it.rotate()
                 }
 
+                it == rotors.first() -> {
+                    if (prevIsAtNotch) {
+                        it.rotate()
+                    }
+                }
+
                 else -> {
                     if (prevIsAtNotch || currentIsAtNotch) {
                         todo.append("Todo: Rotating rotor #${index + 1} from right: ${it.name}, cause(prevAtNotch: $prevIsAtNotch, currentAtNotch: $currentIsAtNotch)\n")
